@@ -75,6 +75,10 @@ body {
     bottom: 0px;
     z-index: 2;
 }
+.elipsis {
+    color: #ffffff;
+
+}
 .elipsis1 {
     position: absolute;
     left: 330px;
