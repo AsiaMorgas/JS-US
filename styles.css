@@ -9,12 +9,13 @@ body {
     font-weight: 900;
 }
 .container {
+    position: relative;
     width: 1920px;
     height: 904px;
     background: #baa0ff;
 }
 .title {
-    position: relative;
+    position: absolute;
     left: 49px;
     top: 56px;
     width: 86px;
@@ -65,4 +66,12 @@ body {
     float: left;
     padding-top: 12px;
     padding-left: 9px;
+}
+
+.image-box {
+    width: 1920px;
+    height: 578px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
 }
