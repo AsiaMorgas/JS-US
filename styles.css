@@ -4,8 +4,10 @@
     /*src: url("css/Fonts/transfonter.org-20190226-164313/Montserrat-Black.woff") format("woff");*/
 /*}*/
 
-
-
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+}
 .container {
     width: 1920px;
     height: 904px;
@@ -17,11 +19,9 @@
     top: 56px;
     width: 86px;
     height: 131px;
-    font-family: "Montserrat-Black", sans-serif;
     font-size: 60px;
-    font-weight: 900;
-    font-style: normal;
-    font-stretch: normal;
+    /*font-style: normal;*/
+    /*font-stretch: normal;*/
     line-height: 0.8;
     letter-spacing: normal;
     text-align: left;
@@ -36,14 +36,15 @@
 }
 
 .clock {
-    position: relative;
+    position: absolute;
     left: 844px;
+    margin: auto;
     top: 50px;
-    width: 148px;
+    right: 845px;
+    width: 231px;
     height: 67px;
-    font-family: "Montserrat-Black", sans-serif;
-    font-weight: 900;
-    font-style: normal;
+    /*font-family: "Montserrat", sans-serif;*/
+    /*font-style: normal;*/
     font-stretch: normal;
     line-height: 0.8;
     letter-spacing: normal;
@@ -51,17 +52,17 @@
     color: #ffffff;
 }
 .clock-large {
-    width: 127px;
+    width: 50%;
     height: 67px;
     font-size: 94px;
-    display: inline;
     float: left;
 }
 
 .clock-small {
-    width: 95px;
+    width: auto ;
     height: 54px;
     font-size: 78px;
-    display: inline;
     float: left;
+    padding-top: 12px;
+    padding-left: 9px;
 }
