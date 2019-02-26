@@ -75,3 +75,59 @@ body {
     bottom: 0px;
     z-index: 2;
 }
+.elipsis1 {
+    position: absolute;
+    left: 330px;
+    top: 426px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.elipsis2 {
+    position: absolute;
+    left: 573px;
+    top: 312px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.elipsis3 {
+    position: absolute;
+    left: 775px;
+    top: 423px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.elipsis4 {
+    position: absolute;
+    left: 1027px;
+    top: 312px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.elipsis5 {
+    position: absolute;
+    left: 1230px;
+    top: 423px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.elipsis6 {
+    position: absolute;
+    left: 1545px;
+    top: 376px;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
+}
