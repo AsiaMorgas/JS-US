@@ -1,0 +1,67 @@
+
+/*@font-face {*/
+    /*font-family: Montserrat;*/
+    /*src: url("css/Fonts/transfonter.org-20190226-164313/Montserrat-Black.woff") format("woff");*/
+/*}*/
+
+
+
+.container {
+    width: 1920px;
+    height: 904px;
+    background: #baa0ff;
+}
+.title {
+    position: relative;
+    left: 49px;
+    top: 56px;
+    width: 86px;
+    height: 131px;
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.title-small {
+    font-size: 48px;
+}
+
+.title-large {
+    font-size: 60px;
+}
+
+.clock {
+    position: relative;
+    left: 844px;
+    top: 50px;
+    width: 148px;
+    height: 67px;
+    font-family: "Montserrat-Black", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.clock-large {
+    width: 127px;
+    height: 67px;
+    font-size: 94px;
+    display: inline;
+    float: left;
+}
+
+.clock-small {
+    width: 95px;
+    height: 54px;
+    font-size: 78px;
+    display: inline;
+    float: left;
+}
