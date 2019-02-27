@@ -75,9 +75,16 @@ body {
     bottom: 0px;
     z-index: 2;
 }
+
+/*.outern-elipsis {*/
+    /*position: relative;*/
+    /*width: 39px;*/
+    /*height: 46px;*/
+/*}*/
+
 .elipsis {
     color: #ffffff;
-
+    font-size: 24px;
 }
 .elipsis1 {
     position: absolute;
