@@ -78,8 +78,6 @@ body {
 }
 .numbers {
     position: absolute;
-    /*left: 330px;*/
-    /*top: 426px;*/
     right: 0px;
     width: 40px;
     height: 46px;
@@ -97,6 +95,7 @@ body {
     height: 30px;
     border-radius: 50%;
     background: #ffffff;
+    text-indent: 33px;
 }
 .elipsis1 {
     left: 10%;
@@ -128,14 +127,6 @@ body {
     left: 90%;
     top: 43%;
 }
-@media only screen and (max-width: 2000px) {
-    /*body {*/
-        /*font-family: "Montserrat-Black", sans-serif;*/
-        /*font-weight: 900;*/
-        /*background: #baa0ff;*/
-    /*}*/
-}
-
 /*device 1*/
 @media only screen and (max-width: 680px) {
     body {
@@ -193,25 +184,17 @@ body {
         padding-top: 12px;
         padding-left: 9px;
     }
-    .image-box img{
-        position: absolute;
-        bottom: 0%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        z-index: 2;
-    }
     .elipsis {
         color: #ffffff;
         position: absolute;
         width: 16px;
         height: 14px;
         border-radius: 50%;
+        text-indent: 20px;
     }
     .elipsis1 {
         left: 10%;
         top: 25%;
-        /*text-indent: 35px;*/
     }
     .elipsis2 {
         left: 16%;
@@ -239,6 +222,7 @@ body {
         top: 43%;
     }
 }
+/*device 2*/
 @media only screen and (max-width: 320px) {
     body {
         font-family: "Montserrat-Black", sans-serif;
