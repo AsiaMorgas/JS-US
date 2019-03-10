@@ -165,7 +165,7 @@ body {
     }
     .clock {
         position: relative;
-        left: 50%;
+        left: 40%;
         margin: auto;
         top: -20px;
         width: 130px;
@@ -191,15 +191,51 @@ body {
         padding-top: 12px;
         padding-left: 9px;
     }
-    /*.image-box img {*/
-        /*position: center;*/
-        /*left: 0%;*/
-        /*bottom: 0%;*/
-        /*max-width: 100%;*/
-        /*width: 100%;*/
-        /*height: auto;*/
-        /*z-index: 2;*/
-    /*}*/
+    .image-box img {
+        position: absolute;
+        bottom: 0%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        z-index: 2;
+    }
+    .elipsis {
+        color: #ffffff;
+        position: absolute;
+        width: 16px;
+        height: 14px;
+        border-radius: 50%;
+    }
+    .elipsis1 {
+        left: 10%;
+        top: 25%;
+        /*text-indent: 35px;*/
+    }
+    .elipsis2 {
+        left: 16%;
+        top: 60%;
+    }
+    .elipsis3 {
+        left: 30%;
+        top: 40%;
+    }
+    .elipsis4 {
+        position: relative;
+        left: 45%;
+        top: 35%;
+    }
+
+    .elipsis5 {
+        position: relative;
+        left: 68%;
+        top: 50%;
+    }
+
+    .elipsis6 {
+        position: relative;
+        left: 90%;
+        top: 43%;
+    }
 }
 @media only screen and (max-width: 320px) {
     body {
