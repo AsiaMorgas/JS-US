@@ -3,15 +3,20 @@
     font-family: Montserrat-Black;
     src: url("css/Fonts/transfonter.org-20190226-164313/Montserrat-Black.woff") format("woff");
 }
-
+html {
+    height: 100%;
+    width: 100%;
+}
 body {
+    height: 100%;
+    width: 100%;
     font-family: "Montserrat-Black", sans-serif;
-    font-weight: 900;
+    /*background: #baa0ff;*/
 }
 .container {
     position: relative;
-    width: 1920px;
-    height: 904px;
+    width: 100%;
+    height: 100%;
     background: #baa0ff;
 }
 .title {
@@ -21,8 +26,6 @@ body {
     width: 86px;
     height: 131px;
     font-size: 60px;
-    /*font-style: normal;*/
-    /*font-stretch: normal;*/
     line-height: 0.8;
     letter-spacing: normal;
     text-align: left;
@@ -37,15 +40,13 @@ body {
 }
 
 .clock {
-    position: absolute;
-    left: 844px;
+    position: relative;
+    left: 50%;
     margin: auto;
     top: 50px;
     right: 845px;
     width: 265px;
     height: 67px;
-    /*font-family: "Montserrat", sans-serif;*/
-    /*font-style: normal;*/
     font-stretch: normal;
     line-height: 0.8;
     letter-spacing: normal;
@@ -68,88 +69,162 @@ body {
     padding-left: 9px;
 }
 
-.image-box {
-    width: 1920px;
-    height: 578px;
+.image-box img {
     position: absolute;
-    bottom: 0px;
+    max-width: 100%;
+    width: 100%;
+    height: 50%;
+    bottom: 0%;
     z-index: 2;
 }
-
-/*.outern-elipsis {*/
-    /*position: relative;*/
-    /*width: 39px;*/
-    /*height: 46px;*/
-/*}*/
-
 .numbers {
     position: absolute;
-    left: 330px;
-    top: 426px;
+    /*left: 330px;*/
+    /*top: 426px;*/
+    right: 0px;
     width: 40px;
     height: 46px;
+    vertical-align: super;
 }
 .connected {
-
+    vertical-align: super;
+    font-size: 100px;
 }
 
 .elipsis {
     color: #ffffff;
-    font-size: 24px;
+    position: absolute;
+    width: 31px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ffffff;
 }
 .elipsis1 {
-    position: absolute;
     left: 330px;
     top: 426px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
+    /*text-indent: 35px;*/
 }
 .elipsis2 {
-    position: absolute;
     left: 573px;
     top: 312px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
 }
 .elipsis3 {
-    position: absolute;
-    left: 775px;
+    left: 124px;
     top: 423px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
 }
 .elipsis4 {
-    position: absolute;
     left: 1027px;
     top: 312px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
 }
 
 .elipsis5 {
-    position: absolute;
     left: 1230px;
     top: 423px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
 }
 
 .elipsis6 {
-    position: absolute;
     left: 1545px;
     top: 376px;
-    width: 31px;
-    height: 30px;
-    border-radius: 50%;
-    background: #ffffff;
 }
+@media only screen and (max-width: 2000px) {
+    /*body {*/
+        /*font-family: "Montserrat-Black", sans-serif;*/
+        /*font-weight: 900;*/
+        /*background: #baa0ff;*/
+    /*}*/
+}
+
+/*device 1*/
+@media only screen and (max-width: 680px) {
+    body {
+        font-family: "Montserrat-Black", sans-serif;
+        font-weight: 600;
+        background: #baa0ff;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        height: 960px;
+    }
+    .title {
+        position: relative;
+        left:50px;
+        top: 50px;
+        width: 50px;
+        height: 90px;
+        line-height: 0.5;
+        letter-spacing: normal;
+        text-align: left;
+        /*color: #ffffff;*/
+    }
+    .title-small {
+        font-size: 26px;
+    }
+    .title-large {
+        font-size: 32px;
+    }
+    .clock {
+        position: relative;
+        left: 50%;
+        margin: auto;
+        top: -20px;
+        width: 130px;
+        height: 37px;
+        font-stretch: normal;
+        line-height: 0.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+    }
+    .clock-large {
+        width: 50%;
+        height: 100%;
+        font-size: 52px;
+        display: inline;
+    }
+
+    .clock-small {
+        width: auto ;
+        height: 54px;
+        font-size: 40px;
+        display: inline;
+        padding-top: 12px;
+        padding-left: 9px;
+    }
+    /*.image-box img {*/
+        /*position: center;*/
+        /*left: 0%;*/
+        /*bottom: 0%;*/
+        /*max-width: 100%;*/
+        /*width: 100%;*/
+        /*height: auto;*/
+        /*z-index: 2;*/
+    /*}*/
+}
+@media only screen and (max-width: 320px) {
+    body {
+        font-family: "Montserrat-Black", sans-serif;
+        font-weight: 300;
+        background: #baa0ff;
+    }
+
+    .title {
+        left: 20px;
+        top: 25px;
+        width: 30px;
+        height: 40px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .title-small {
+        font-size: 18px;
+    }
+
+    .title-large {
+        font-size: 24px;
+    }
+}
+/***********/
+
