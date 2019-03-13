@@ -11,6 +11,7 @@ body {
     height: 100%;
     width: 100%;
     font-family: "Montserrat-Black", sans-serif;
+    color: #ffffff;
     /*background: #baa0ff;*/
 }
 .container {
@@ -20,16 +21,12 @@ body {
     background: #baa0ff;
 }
 .title {
-    position: absolute;
-    left: 49px;
-    top: 56px;
+    position: relative;
+    padding-top: 56px;
+    padding-left: 49px;
     width: 86px;
-    height: 131px;
     font-size: 60px;
     line-height: 0.8;
-    letter-spacing: normal;
-    text-align: left;
-    color: #ffffff;
 }
 .title-small {
     font-size: 48px;
@@ -40,31 +37,26 @@ body {
 }
 
 .clock {
-    position: relative;
+    position: absolute;
     left: 50%;
     margin: auto;
     top: 50px;
-    right: 845px;
-    width: 265px;
-    height: 67px;
-    font-stretch: normal;
-    line-height: 0.8;
-    letter-spacing: normal;
-    text-align: left;
+    /*height: 67px;*/
+    /*line-height: 0.8;*/
     color: #ffffff;
+    /*translate dotyczy self - liczony od lewego gornego rogu , transform moze byc origin podany, albo transformX, transformY */
+    transform: translateX(-50%);
 }
 .clock-large {
-    width: 50%;
-    height: 67px;
     font-size: 94px;
-    display: inline;
+    /*display: inline;*/
 }
 
 .clock-small {
-    width: auto ;
-    height: 54px;
+    /*width: auto ;*/
+    /*height: 54px;*/
     font-size: 78px;
-    display: inline;
+    /*display: inline;*/
     padding-top: 12px;
     padding-left: 9px;
 }
@@ -76,79 +68,58 @@ body {
     height: auto;
     z-index: 2;
 }
-.numbers {
+.elipsis-outern-1 {
     position: absolute;
-    right: 0px;
-    width: 40px;
-    height: 46px;
-    vertical-align: super;
+    left: 10%;
+    top: 25%;
 }
-.connected {
-    vertical-align: super;
-    font-size: 100px;
+.elipsis-outern-2 {
+    position: absolute;
+    left: 16%;
+    top: 60%;
 }
-
+.elipsis-outern-3 {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}
+.elipsis-outern-4 {
+    position: absolute;
+    left: 45%;
+    top: 35%;
+}
+.elipsis-outern-5 {
+    position: absolute;
+    left: 68%;
+    top: 50%;
+}
+.elipsis-outern-6 {
+    position: absolute;
+    left: 90%;
+    top: 43%;
+}
+.elipsis-number {
+    position: absolute;
+    /*top: -40px;*/
+    /*left: 33px;*/
+    transform: translate(30px,-45px);
+}
 .elipsis {
-    color: #ffffff;
     position: absolute;
+    bottom: 0%;
+    left: 0%;
     width: 31px;
     height: 30px;
     border-radius: 50%;
     background: #ffffff;
-    text-indent: 33px;
-}
-.elipsis1 {
-    left: 10%;
-    top: 25%;
-    /*text-indent: 35px;*/
-}
-.elipsis2 {
-    left: 16%;
-    top: 60%;
-}
-.elipsis3 {
-    left: 30%;
-    top: 40%;
-}
-.elipsis4 {
-    position: relative;
-    left: 45%;
-    top: 35%;
-}
-
-.elipsis5 {
-    position: relative;
-    left: 68%;
-    top: 50%;
-}
-
-.elipsis6 {
-    position: relative;
-    left: 90%;
-    top: 43%;
 }
 /*device 1*/
 @media only screen and (max-width: 680px) {
-    body {
-        font-family: "Montserrat-Black", sans-serif;
-        font-weight: 600;
-        background: #baa0ff;
-    }
-    .container {
-        position: relative;
-        width: 100%;
-        height: 960px;
-    }
     .title {
-        position: relative;
-        left:50px;
-        top: 50px;
+        padding-top: 50px;
+        padding-left: 50px;
         width: 50px;
-        height: 90px;
         line-height: 0.5;
-        letter-spacing: normal;
-        text-align: left;
-        /*color: #ffffff;*/
     }
     .title-small {
         font-size: 26px;
@@ -224,20 +195,11 @@ body {
 }
 /*device 2*/
 @media only screen and (max-width: 320px) {
-    body {
-        font-family: "Montserrat-Black", sans-serif;
-        font-weight: 300;
-        background: #baa0ff;
-    }
-
     .title {
         left: 20px;
         top: 25px;
         width: 30px;
         height: 40px;
-        letter-spacing: normal;
-        text-align: left;
-        color: #ffffff;
     }
 
     .title-small {
