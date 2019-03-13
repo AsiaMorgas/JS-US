@@ -102,7 +102,8 @@ body {
     position: absolute;
     /*top: -40px;*/
     /*left: 33px;*/
-    transform: translate(30px,-45px);
+    /*transform: translate(30px,-45px);*/
+    transform: translate(273%,-226%);
 }
 .elipsis {
     position: absolute;
@@ -156,43 +157,18 @@ body {
         padding-left: 9px;
     }
     .elipsis {
-        color: #ffffff;
         position: absolute;
+        bottom: 0%;
+        left: 0%;
         width: 16px;
         height: 14px;
         border-radius: 50%;
-        text-indent: 20px;
     }
-    .elipsis1 {
-        left: 10%;
-        top: 25%;
-    }
-    .elipsis2 {
-        left: 16%;
-        top: 60%;
-    }
-    .elipsis3 {
-        left: 30%;
-        top: 40%;
-    }
-    .elipsis4 {
-        position: relative;
-        left: 45%;
-        top: 35%;
+    .elipsis-number {
+        transform: translate(234%,-164%);
     }
 
-    .elipsis5 {
-        position: relative;
-        left: 68%;
-        top: 50%;
-    }
 
-    .elipsis6 {
-        position: relative;
-        left: 90%;
-        top: 43%;
-    }
-}
 /*device 2*/
 @media only screen and (max-width: 320px) {
     .title {
