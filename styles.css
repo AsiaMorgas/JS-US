@@ -47,18 +47,15 @@ html {
 }
 .clock__clock-large {
     font-size: 94px;
-    /*display: inline;*/
 }
 
 .clock__clock-small {
-    /*width: auto ;*/
-    /*height: 54px;*/
     font-size: 78px;
-    /*display: inline;*/
     padding-top: 12px;
     padding-left: 9px;
 }
-.image-box img{
+/*Not sure if I can leave img tag here - or if I can add a class to an img tag*/
+.image-box img {
     position: absolute;
     bottom: 0%;
     max-width: 100%;
@@ -66,33 +63,30 @@ html {
     height: auto;
     z-index: 2;
 }
-.elipsis-outern-1 {
+.elipsis-outern {
     position: absolute;
+}
+.elipsis-outern-1 {
     left: 10%;
-    top: 25%;
+    top: 35%;
 }
 .elipsis-outern-2 {
-    position: absolute;
     left: 16%;
     top: 60%;
 }
 .elipsis-outern-3 {
-    position: absolute;
     left: 30%;
     top: 40%;
 }
 .elipsis-outern-4 {
-    position: absolute;
     left: 45%;
     top: 35%;
 }
 .elipsis-outern-5 {
-    position: absolute;
     left: 68%;
     top: 50%;
 }
 .elipsis-outern-6 {
-    position: absolute;
     left: 90%;
     top: 43%;
 }
@@ -104,8 +98,8 @@ html {
     padding: 1px;
     /*top: -40px;*/
     /*left: 33px;*/
-    /*transform: translate(30px,-45px);*/
-    transform: translate(273%,-226%);
+    transform: translate(30px,-45px);
+    /*transform: translate(273%,-226%);*/
 }
 .elipsis-outern__elipsis {
     position: absolute;
@@ -124,25 +118,24 @@ html {
         width: 50px;
         line-height: 0.5;
     }
+
     .title__title-small {
         font-size: 26px;
     }
+
     .title__title-large {
         font-size: 32px;
     }
+
     .clock {
         position: relative;
         left: 40%;
         margin: auto;
         top: -20px;
         width: 130px;
-        height: 37px;
-        font-stretch: normal;
         line-height: 0.5;
-        letter-spacing: normal;
-        text-align: left;
-        color: #ffffff;
     }
+
     .clock__clock-large {
         width: 50%;
         height: 100%;
@@ -151,10 +144,62 @@ html {
     }
 
     .clock__clock-small {
-        width: auto ;
+        width: auto;
         height: 54px;
         font-size: 40px;
         display: inline;
+        padding-top: 12px;
+        padding-left: 9px;
+    }
+
+    .elipsis-outern__elipsis {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 16px;
+        height: 14px;
+        border-radius: 50%;
+    }
+
+    .elipsis-outern__elipsis-number {
+        transform: translate(234%, -164%);
+    }
+
+}
+
+
+/*device 2 - to be done later when necessary*/
+@media only screen and (max-width: 320px) {
+
+    .title {
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 25px;
+        line-height: 0.5;
+    }
+
+    .title__title-small {
+        font-size: 16px;
+    }
+
+    .title__title-large {
+        font-size: 24px;
+    }
+
+    .clock {
+        position: relative;
+        left: 40%;
+        margin: auto;
+        top: -20px;
+        width: 130px;
+        line-height: 0.5;
+    }
+    .clock__clock-large {
+        font-size: 44px;
+    }
+
+    .clock__clock-small {
+        font-size: 36px;
         padding-top: 12px;
         padding-left: 9px;
     }
@@ -166,25 +211,9 @@ html {
         height: 14px;
         border-radius: 50%;
     }
+
     .elipsis-outern__elipsis-number {
-        transform: translate(234%,-164%);
+        transform: translate(109%, -164%);
     }
 
-
-/*device 2*/
-@media only screen and (max-width: 320px) {
-    .title {
-        left: 20px;
-        top: 25px;
-        width: 30px;
-        height: 40px;
-    }
-
-    .title__title-small {
-        font-size: 18px;
-    }
-
-    .title__title-large {
-        font-size: 24px;
-    }
- }
+}
