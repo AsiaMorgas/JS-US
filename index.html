@@ -53,6 +53,22 @@
         </div>
 
     </div>
-
+    <script>
+       let elipse =  document.querySelector(".elipsis-outern.elipsis-outern-1");
+       // elipse.className = elipse.className + " selected";
+       elipse.classList.toggle("selected");
+       let clone = elipse.cloneNode(true);
+       clone.style.background = "red";
+       // 1st way
+       const container = document.querySelector(".container");
+       container.appendChild(clone);
+       clone.style.top="50%";
+    // 2nd
+        const clone2 = document.createElement("div");
+        clone2.innerHTML= "     <div class=\"elipsis1 elipsis-outern__elipsis\"></div>\n" +
+          " <div class=\"elipsis-outern__elipsis-number\">7</div>";
+        const clock = document.querySelector(".clock");
+        container.insertBefore(clone2, clock);
+    </script>
 </body>
-</html>
+</html
