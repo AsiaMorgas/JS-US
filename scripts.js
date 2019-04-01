@@ -15,57 +15,52 @@ function chooseRandomNumber() { return Math.floor((Math.random() * 100) + 1) + "
 const image = document.querySelector(".image-box");
 const container = document.querySelector(".container");
 
+const ellipseWrapper = document.createElement("div");
+ellipseWrapper.classList.add("ellipse-wrapper");
+ellipseWrapper.classList.add("ellipse-outern--" + number);
+ellipseWrapper.innerHTML =
+  "<div class='ellipse-wrapper__ellipse-number'></div>\n" +
+  "<div class='ellipse-wrapper__ellipse'></div>";
 
 function displayEllipse() {
   let topRandom = chooseRandomNumber();
   let leftRandom = chooseRandomNumber();
+  let ellipse = ellipseWrapper;
 
-  const ellipseWrapper = document.createElement("div");
-  ellipseWrapper.classList.add("ellipse-wrapper");
-  ellipseWrapper.classList.add("ellipse-outern--" + number);
-
-  ellipseWrapper.innerHTML =
-    "<div class='ellipse-wrapper__ellipse-number'></div>\n" +
-    "<div class='ellipse-wrapper__ellipse'></div>";
-  ellipseWrapper.style.top = topRandom;
-  ellipseWrapper.style.left = leftRandom;
-  container.insertBefore(ellipseWrapper, image);
+  ellipse.style.top = topRandom;
+  ellipse.style.left = leftRandom;
+  container.insertBefore(ellipse, image);
   const numberWrapper = document.querySelector(".ellipse-wrapper__ellipse-number");
   numberWrapper.insertAdjacentText("beforeend", number);
 }
-
-function displayClone() {
-  let topRandom = chooseRandomNumber();
-  let leftRandom = chooseRandomNumber();
-
-  const ellipseWrapper = document.createElement("div");
-  ellipseWrapper.classList.add("ellipse-wrapper");
-  ellipseWrapper.classList.add("ellipse-outern--" + number);
-
-  ellipseWrapper.innerHTML =
-    "<div class='ellipse-wrapper__ellipse-number'></div>\n" +
-    "<div class='ellipse-wrapper__ellipse'></div>";
-  ellipseWrapper.style.top = topRandom;
-  ellipseWrapper.style.left = leftRandom;
-  container.insertBefore(ellipseWrapper, image);
-  const numberWrapper = document.querySelector(".ellipse-wrapper__ellipse-number");
-  numberWrapper.insertAdjacentText("beforeend", number);
+function removeEllipse() {
+  const el = document.querySelector(".ellipse-wrapper.ellipse-outern--1");
+  if(el){
+    setTimeout(function() {el.remove()}, 2000);
+  }
 }
-
 
 // function displayClone() {
-//       let topRandom = chooseRandomNumber();
-//       let leftRandom = chooseRandomNumber();
-//       const newEllipse = ellipseWrapper.cloneNode(true);
-//       newEllipse.style.top = topRandom;
-//       newEllipse.style.left = leftRandom;
-//       container.insertBefore(newEllipse, image);
-//     }
-//     setTimeout(cloneAndDisplay(), 2000);
+//   let topRandom = chooseRandomNumber();
+//   let leftRandom = chooseRandomNumber();
+//   let clone = ellipseWrapper.cloneNode(true);
+// clone.style.top = topRandom;
+//   clone.style.left = leftRandom;
+//   container.insertBefore(clone, image);
+//   const numberWrapper = document.querySelector(".ellipse-wrapper__ellipse-number");
+//   numberWrapper.insertAdjacentText("beforeend", number);
 // }
 
-displayEllipse();
-displayClone();
+
+setInterval(
+ function() {
+   for(let i=0; i<15; i++){
+   displayEllipse();
+   removeEllipse()}
+ },4000);
+
+
+
 
 
 
