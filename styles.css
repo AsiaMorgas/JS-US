@@ -60,49 +60,53 @@ html {
     bottom: 0%;
     max-width: 100%;
     width: auto;
-    height: auto;
+    height: 50%;
     z-index: 2;
 }
-.elipsis-outern {
+.ellipse-wrapper {
     position: absolute;
+    z-index: 100;
 }
-.elipsis-outern-1 {
-    left: 10%;
-    top: 35%;
-}
-.elipsis-outern-2 {
+
+.ellipse-wrapper.ellipse-outern--1 {
+    position: absolute;
     left: 16%;
     top: 60%;
 }
-.elipsis-outern-3 {
-    left: 30%;
-    top: 40%;
-}
-.elipsis-outern-4 {
-    left: 45%;
-    top: 35%;
-}
-.elipsis-outern-5 {
-    left: 68%;
-    top: 50%;
-}
-.elipsis-outern-6 {
-    left: 90%;
-    top: 43%;
-}
+/*.elipsis-outern--2 {*/
+    /*left: 16%;*/
+    /*top: 60%;*/
+/*}*/
+/*.elipsis-outern--3 {*/
+    /*left: 30%;*/
+    /*top: 40%;*/
+/*}*/
+/*.elipsis-outern--4 {*/
+    /*left: 45%;*/
+    /*top: 35%;*/
+/*}*/
+/*.elipsis-outern--5 {*/
+    /*left: 68%;*/
+    /*top: 50%;*/
+/*}*/
+/*.elipsis-outern--6 {*/
+    /*left: 90%;*/
+    /*top: 43%;*/
+/*}*/
 
 /*Not sure hoe to rename .elipsis-number as this is a div inside every .elipsis-outern-x*/
 
-.elipsis-outern__elipsis-number {
+.ellipse-wrapper__ellipse-number {
     position: absolute;
+    top: -35%;
+    right: -30%;
     padding: 1px;
     /*top: -40px;*/
     /*left: 33px;*/
-    transform: translate(30px,-45px);
+    /*transform: translate(30px,-45px);*/
     /*transform: translate(273%,-226%);*/
 }
-.elipsis-outern__elipsis {
-    /*position: absolute;*/
+.ellipse-wrapper__ellipse {
     bottom: 0;
     left: 0;
     width: 31px;
@@ -152,7 +156,7 @@ html {
         padding-left: 9px;
     }
 
-    .elipsis-outern__elipsis {
+    .ellipse-wrapper__ellipse {
         position: absolute;
         bottom: 0%;
         left: 0%;
@@ -161,12 +165,11 @@ html {
         border-radius: 50%;
     }
 
-    .elipsis-outern__elipsis-number {
+    .ellipse-wrapper__ellipse-number {
         transform: translate(234%, -164%);
     }
 
 }
-
 
 /*device 2 - to be done later when necessary*/
 @media only screen and (max-width: 320px) {
@@ -194,6 +197,7 @@ html {
         width: 130px;
         line-height: 0.5;
     }
+
     .clock__clock-large {
         font-size: 44px;
     }
@@ -203,17 +207,22 @@ html {
         padding-top: 12px;
         padding-left: 9px;
     }
-    .elipsis-outern__elipsis {
-        position: absolute;
+
+    .ellipse-wrapper__ellipse {
         bottom: 0%;
         left: 0%;
-        width: 16px;
-        height: 14px;
+        width: 14px;
+        height: 12px;
         border-radius: 50%;
     }
 
-    .elipsis-outern__elipsis-number {
-        transform: translate(109%, -164%);
+    /*.elipsis-outern__elipsis--number {*/
+    /*transform: translate(190%, -140%);*/
+    /*}*/
+    .ellipse-wrapper__ellipse-number {
+        position: absolute;
+        top: -35%;
+        right: -30%;
+        padding: 1px;
     }
-
 }

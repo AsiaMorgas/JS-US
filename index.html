@@ -15,60 +15,43 @@
         </div>
 
         <span class="clock">
-            <span class="clock__clock-large">01:</span>
-            <span class="clock__clock-small">44</span>
+            <span class="clock__clock-large"></span>
+            <span class="clock__clock-small"></span>
         </span>
 
         <div class="image-box">
             <img srcset="css/warstwa-2_2019-02-26/warstwa-2@3x.png 3x, css/warstwa-2_2019-02-26/warstwa-2@2x.png 2x,css/warstwa-2_2019-02-26/warstwa-2.png 1x"/>
         </div>
-        <div class="elipsis-outern elipsis-outern-1">
-            <div class=" elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">1</div>
-        </div>
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;1">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">1</div>-->
+            <!--<div class=" ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
 
-        <div class="elipsis-outern elipsis-outern-2">
-            <div class="elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">2</div>
-        </div>
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;2">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">2</div>-->
+            <!--<div class="ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
 
-        <div class="elipsis-outern elipsis-outern-3">
-            <div class="elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">3</div>
-        </div>
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;3">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">3</div>-->
+            <!--<div class="ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
 
-        <div class="elipsis-outern elipsis-outern-4">
-            <div class="elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">4</div>
-        </div>
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;4">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">4</div>-->
+            <!--<div class="ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
 
-        <div class="elipsis-outern elipsis-outern-5">
-            <div class="elipsis1 elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">5</div>
-        </div>
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;5">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">5</div>-->
+            <!--<div class="elipsis1 ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
 
-        <div class="elipsis-outern elipsis-outern-6">
-            <div class="elipsis1 elipsis-outern__elipsis"></div>
-            <div class="elipsis-outern__elipsis-number">6</div>
-        </div>
-
+        <!--<div class="ellipse-wrapper elipsis-outern&#45;&#45;6">-->
+            <!--<div class="ellipse-wrapper__ellipse-number">6</div>-->
+            <!--<div class="elipsis1 ellipse-wrapper__ellipse"></div>-->
+        <!--</div>-->
     </div>
-    <script>
-       let elipse =  document.querySelector(".elipsis-outern.elipsis-outern-1");
-       // elipse.className = elipse.className + " selected";
-       elipse.classList.toggle("selected");
-       let clone = elipse.cloneNode(true);
-       clone.style.background = "red";
-       // 1st way
-       const container = document.querySelector(".container");
-       container.appendChild(clone);
-       clone.style.top="50%";
-    // 2nd
-        const clone2 = document.createElement("div");
-        clone2.innerHTML= "     <div class=\"elipsis1 elipsis-outern__elipsis\"></div>\n" +
-          " <div class=\"elipsis-outern__elipsis-number\">7</div>";
-        const clock = document.querySelector(".clock");
-        container.insertBefore(clone2, clock);
-    </script>
+    <script src="scripts.js"></script>
 </body>
-</html
+</html>
