@@ -72,10 +72,16 @@ const ellipsesSwitch = setInterval(ellipseInterval, 2000);
 
 //TIME:
 
-  let distance = 15;
+  let distance = 150;
   let countDownInterval = setInterval(countDown, 1000);
   const clockLarge = document.querySelector('.clock__clock-large');
   const clockSmall = document.querySelector('.clock__clock-small');
+
+    window.onload = function () {
+      clockLarge.innerHTML = `0${Math.floor(distance / 60).toString()}:`;
+      clockSmall.innerHTML =`${(distance % 60).toString()}`;
+    }
+
 
   function countDown() {
     distance--;
