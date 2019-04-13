@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>JS-US</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+    
+        var count=150;
+        var Time_counter=setInterval(timer, 1000) ;
+    
+        function timer() {
+            count=count-1;
+            let min = Math.floor(count/60);
+            let sec = count%60;
+        
+            if(count <=1){
+                clearInterval(Time_counter);
+                alert("Game Over") ;
+                return;
+            }
+        
+            document.querySelector(".clock-large").innerHTML=min;
+            document.querySelector(".clock-small").innerHTML=sec;
+        }
+    </script>>
 </head>
 <body>
     <div class="container">
@@ -12,7 +32,7 @@
             <span class="title-large">JS US</span>
         </div>
         <div class="clock">
-            <div class="clock-large">01:</div>
+            <div id="clock" class="clock-large">01:</div>
             <div class="clock-small">44</div>
         </div>
     </div>
