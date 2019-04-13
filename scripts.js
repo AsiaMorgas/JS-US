@@ -9,63 +9,73 @@
 // clone.style.top="50%";
 // 2nd
 
-
-var number = "1";
-function chooseRandomNumber() { return Math.floor((Math.random() * 100) + 1) + "%";}
 const image = document.querySelector(".image-box");
 const container = document.querySelector(".container");
 
-const ellipseWrapper = document.createElement("div");
-ellipseWrapper.classList.add("ellipse-wrapper");
-ellipseWrapper.classList.add("ellipse-outern--" + number);
-ellipseWrapper.innerHTML =
-  "<div class='ellipse-wrapper__ellipse-number'></div>\n" +
-  "<div class='ellipse-wrapper__ellipse'></div>";
 
-function displayEllipse() {
-  let topRandom = chooseRandomNumber();
-  let leftRandom = chooseRandomNumber();
-  let ellipse = ellipseWrapper;
-
-  ellipse.style.top = topRandom;
-  ellipse.style.left = leftRandom;
-  container.insertBefore(ellipse, image);
-  const numberWrapper = document.querySelector(".ellipse-wrapper__ellipse-number");
-  numberWrapper.insertAdjacentText("beforeend", number);
+function chooseRandomNumber() {
+  return Math.floor((Math.random() * 100) + 1) + "%";
 }
-function removeEllipse() {
-  const el = document.querySelector(".ellipse-wrapper.ellipse-outern--1");
-  if(el){
-    setTimeout(function() {el.remove()}, 2000);
+
+function createEllipse() {
+  const ellipseWrapper = document.createElement("div");
+  ellipseWrapper.classList.add("ellipse-wrapper");
+  ellipseWrapper.innerHTML =
+    "<div class='ellipse-wrapper__ellipse-number'></div>\n" +
+    "<div class='ellipse-wrapper__ellipse'></div>";
+  return ellipseWrapper;
+}
+
+
+let ellipse1 = createEllipse();
+ellipse1.classList.add("ancestor");
+ellipse1.style.visibility = "hidden";
+
+let ellipse2 = createEllipse();
+ellipse2.classList.add("descendant");
+ellipse2.style.visibility = "hidden";
+
+function addEllipseToDOM(ell) {
+  container.insertBefore(ell, image);
+}
+addEllipseToDOM(ellipse1);
+addEllipseToDOM(ellipse2);
+
+const ellipse1Element=document.querySelector('.ellipse-wrapper.ancestor');
+ellipse1Element.addEventListener('visibilitychange', function()
+{
+  setTimeout(function()
+  {
+    toggleEllipseVisibility(ellipse2)
+  }, 1000)
+}, false);
+
+//const ellipse2Element=document.querySelector('ellipse-wrapper.descendant');
+
+function toggleEllipseVisibility(elipsa) {
+  if(window.getComputedStyle(ellipse1Element)
+    .visibility === "hidden"){
+    elipsa.style.visibility='visible';
+  }else{
+    elipsa.style.visibility='hidden';
   }
 }
 
-// function displayClone() {
-//   let topRandom = chooseRandomNumber();
-//   let leftRandom = chooseRandomNumber();
-//   let clone = ellipseWrapper.cloneNode(true);
-// clone.style.top = topRandom;
-//   clone.style.left = leftRandom;
-//   container.insertBefore(clone, image);
-//   const numberWrapper = document.querySelector(".ellipse-wrapper__ellipse-number");
-//   numberWrapper.insertAdjacentText("beforeend", number);
-// }
+function changeEllipseCoordinates(elipsa) {
+  let topRandom = chooseRandomNumber();
+  let leftRandom = chooseRandomNumber();
+  elipsa.style.top=topRandom;
+  elipsa.style.left=leftRandom;
+}
 
+function ellipse1Interval() {
+  setTimeout(function() {
+    changeEllipseCoordinates(ellipse1);
+    toggleEllipseVisibility(ellipse1);
+  }, 2000);
+}
 
-setInterval(
- function() {
-   for(let i=0; i<15; i++){
-   displayEllipse();
-   removeEllipse()}
- },4000);
-
-
-
-
-
-
-
-
+setInterval(ellipse1Interval, 4000);
 
 
 
@@ -74,20 +84,29 @@ setInterval(
 
 //TIME:
 
-function currentTime() {
-  setInterval(timer, 1000)
-};
+  let distance = 150;
+  let countDownInterval = setInterval(countDown, 1000);
+  const clockLarge = document.querySelector('.clock__clock-large');
+  const clockSmall = document.querySelector('.clock__clock-small');
 
-function timer() {
-  let date = new Date();
-  let currentHours = date.getHours().toLocaleString();
-  currentHours = (`0${currentHours}`).slice(-2)
-  let currentMin = date.getMinutes().toLocaleString();
-  currentMin = (`0${currentMin}`).slice(-2);
-  document.querySelector("span.clock__clock-large").innerHTML = `${currentHours}:`;
-  document.querySelector("span.clock__clock-small").innerHTML = `${currentMin}`;
+  function countDown() {
+    distance = distance - 1;
+    let min = Math.floor(distance / 60).toString();
+    let sec = (distance % 60).toString();
+    clockLarge.innerHTML = `0${min}:`;
+    clockSmall.innerHTML = `0${sec}`.slice(-2);
+
+    if (distance < 1) {
+      clearInterval(countDownInterval);
+      gameOverMessage();
+    }
+    }
+
+function gameOverMessage() {
+  clockLarge.innerHTML='GAME ';
+  clockSmall.innerHTML = 'OVER!!';
 }
-currentTime();
+
 
 // ellipseWrapper.addEventListener("click",moveEllipse)
 //

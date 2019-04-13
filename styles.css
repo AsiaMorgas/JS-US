@@ -68,31 +68,6 @@ html {
     z-index: 100;
 }
 
-.ellipse-wrapper.ellipse-outern--1 {
-    position: absolute;
-    left: 16%;
-    top: 60%;
-}
-/*.elipsis-outern--2 {*/
-    /*left: 16%;*/
-    /*top: 60%;*/
-/*}*/
-/*.elipsis-outern--3 {*/
-    /*left: 30%;*/
-    /*top: 40%;*/
-/*}*/
-/*.elipsis-outern--4 {*/
-    /*left: 45%;*/
-    /*top: 35%;*/
-/*}*/
-/*.elipsis-outern--5 {*/
-    /*left: 68%;*/
-    /*top: 50%;*/
-/*}*/
-/*.elipsis-outern--6 {*/
-    /*left: 90%;*/
-    /*top: 43%;*/
-/*}*/
 
 /*Not sure hoe to rename .elipsis-number as this is a div inside every .elipsis-outern-x*/
 
