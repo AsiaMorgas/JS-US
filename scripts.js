@@ -1,4 +1,29 @@
 
+// zamien elipse na obiekty ktore beda trzymac swoj stan
+/*
+
+const {
+selected
+hitCount
+DOMelemend
+}
+
+
+
+selected() w dwch kontekstach
+
+
+* licznik ulokowac w jednym miejscu
+*
+* CHA|IN ??????
+*
+*POPRAWI
+*
+* */
+
+
+
+
 
 const image = document.querySelector(".image-box");
 const container = document.querySelector(".container");
